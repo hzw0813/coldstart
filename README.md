@@ -1,5 +1,7 @@
 # ColdStart
 
+[![Tests](https://github.com/hzw0813/coldstart/actions/workflows/test.yml/badge.svg)](https://github.com/hzw0813/coldstart/actions/workflows/test.yml)
+
 **Catch stale README commands before your next contributor does.**
 
 ColdStart compares shell snippets in an existing README with the files and package scripts in a local checkout. It produces line-numbered evidence you can inspect in the terminal, attach as Markdown, or open as an offline HTML report.
@@ -109,7 +111,7 @@ Good first contributions: an unsupported command fixture, a false-positive regre
 
 ## Project status
 
-Implemented: local scanner, terminal/JSON/Markdown/HTML outputs, fixtures, and automated tests.
+Implemented: local scanner, terminal/JSON/Markdown/HTML outputs, fixtures, and 83 automated tests. CI passes on Python 3.10, 3.12, and 3.14. The eight-project study can be reproduced from a fresh clone; see [validation evidence](docs/validation.txt).
 
 Not yet established: external adoption, user testimonials, or production reliability across arbitrary READMEs.
 
