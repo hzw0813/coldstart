@@ -1,0 +1,61 @@
+name: Trial feedback
+description: Share what happened when you tried ColdStart on one README.
+title: "[Trial] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for trying ColdStart. One small, reproducible example is enough.
+        Issues are public: remove secrets, private paths, and proprietary content before posting.
+        A trial report is feedback, not a claim of adoption or endorsement.
+  - type: input
+    id: environment
+    attributes:
+      label: Version and environment
+      description: Include the ColdStart version (coldstart --version), OS, and Python version.
+      placeholder: "ColdStart 0.1.0; macOS; Python 3.12"
+    validations:
+      required: true
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: What happened?
+      multiple: true
+      options:
+        - Results were useful / worked as expected
+        - False positive or incorrect result
+        - Unsupported or unverified command
+        - Could not complete the scan
+        - Other feedback
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: README and repository context
+      description: Link a public repository, commit, and README path or lines; alternatively paste a minimal sanitized snippet with relevant file paths or package scripts. No private repository or full report is needed.
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command you ran
+      description: Replace private paths with placeholders.
+      placeholder: "python3 -m coldstart /path/to/project --readme README.md"
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed result
+      description: Paste the relevant sanitized report lines or error and exit code, if known. A short description is also fine.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result and usefulness
+      description: What should have happened? If it worked, which result was useful? A found reference does not prove that setup or execution succeeds.
+    validations:
+      required: true
