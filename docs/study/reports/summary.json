@@ -1,0 +1,250 @@
+[
+  {
+    "id": "np",
+    "repository": "sindresorhus/np",
+    "commit": "5ca53e9a04158b2fa544fb9523ecb7e6b2db7ddc",
+    "readme": "readme.md",
+    "readme_sha256": "8d0f06ed2653e6245626e6974e5708dc1bfea04da9431209b9c3f1e71ded6ca6",
+    "license": "MIT",
+    "sample_note": "Three established, distinct Node.js tools/frameworks chosen before inspecting scanner findings.",
+    "source_url": "https://github.com/sindresorhus/np/blob/5ca53e9a04158b2fa544fb9523ecb7e6b2db7ddc/readme.md",
+    "scanner": {
+      "version": "0.1.0",
+      "source_sha256": "b426fd5f4fd4a7680717a6cb4391b7d8f8d9162c3c3970c65b47e33886d40921",
+      "files": {
+        "coldstart/__init__.py": "06d179b4c2557e5db032b551b782499ca090d7ad9fa778314060a8ccf110720f",
+        "coldstart/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+        "coldstart/cli.py": "672cb60bbff81b6704477a77ebb1f7a521efb2d95aa519082218522ef72f7f34",
+        "coldstart/local_targets.py": "a2dcb1229b55a55e1dde0579e8745782c0c01cd2518de9a79d4039d01faac4a0",
+        "coldstart/report.py": "7133dc2dd28eee520d260af7605e5a0efd8971c812dfb8b05fccf238e85056ce",
+        "coldstart/scanner.py": "acbfeb1fc6625467d478129412a53c85dabdae82603ae279eb524f2b2ac9497e"
+      }
+    },
+    "commands_executed": false,
+    "context": "Real-project static sample at a pinned commit. Project commands were not executed. This is not endorsement, adoption, or proof of successful installation. Unknown counts are analysis checkpoints, not coverage percentages or a complete command count.",
+    "summary": {
+      "pass": 0,
+      "fail": 0,
+      "unknown": 22
+    },
+    "report_json": "np.json",
+    "report_html": "np.html"
+  },
+  {
+    "id": "commander",
+    "repository": "tj/commander.js",
+    "commit": "ba6d13ddb4243e5913367734f8c159089ffe7834",
+    "readme": "Readme.md",
+    "readme_sha256": "e219aeefbaea202ffb39b94a50812a4a2e69e91b67db3a5e39f3e0eeae2d7686",
+    "license": "MIT",
+    "sample_note": "Three established, distinct Node.js tools/frameworks chosen before inspecting scanner findings.",
+    "source_url": "https://github.com/tj/commander.js/blob/ba6d13ddb4243e5913367734f8c159089ffe7834/Readme.md",
+    "scanner": {
+      "version": "0.1.0",
+      "source_sha256": "b426fd5f4fd4a7680717a6cb4391b7d8f8d9162c3c3970c65b47e33886d40921",
+      "files": {
+        "coldstart/__init__.py": "06d179b4c2557e5db032b551b782499ca090d7ad9fa778314060a8ccf110720f",
+        "coldstart/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+        "coldstart/cli.py": "672cb60bbff81b6704477a77ebb1f7a521efb2d95aa519082218522ef72f7f34",
+        "coldstart/local_targets.py": "a2dcb1229b55a55e1dde0579e8745782c0c01cd2518de9a79d4039d01faac4a0",
+        "coldstart/report.py": "7133dc2dd28eee520d260af7605e5a0efd8971c812dfb8b05fccf238e85056ce",
+        "coldstart/scanner.py": "acbfeb1fc6625467d478129412a53c85dabdae82603ae279eb524f2b2ac9497e"
+      }
+    },
+    "commands_executed": false,
+    "context": "Real-project static sample at a pinned commit. Project commands were not executed. This is not endorsement, adoption, or proof of successful installation. Unknown counts are analysis checkpoints, not coverage percentages or a complete command count.",
+    "summary": {
+      "pass": 0,
+      "fail": 0,
+      "unknown": 47
+    },
+    "report_json": "commander.json",
+    "report_html": "commander.html"
+  },
+  {
+    "id": "express",
+    "repository": "expressjs/express",
+    "commit": "1c6f1b0fe4000977b9a7b4f34097e4d527dd9824",
+    "readme": "Readme.md",
+    "readme_sha256": "3cf5f3e224dbb9b5e2bc0ac255871de453762ae7a277f868da5f4a69d6ff2509",
+    "license": "MIT",
+    "sample_note": "Three established, distinct Node.js tools/frameworks chosen before inspecting scanner findings.",
+    "source_url": "https://github.com/expressjs/express/blob/1c6f1b0fe4000977b9a7b4f34097e4d527dd9824/Readme.md",
+    "scanner": {
+      "version": "0.1.0",
+      "source_sha256": "b426fd5f4fd4a7680717a6cb4391b7d8f8d9162c3c3970c65b47e33886d40921",
+      "files": {
+        "coldstart/__init__.py": "06d179b4c2557e5db032b551b782499ca090d7ad9fa778314060a8ccf110720f",
+        "coldstart/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+        "coldstart/cli.py": "672cb60bbff81b6704477a77ebb1f7a521efb2d95aa519082218522ef72f7f34",
+        "coldstart/local_targets.py": "a2dcb1229b55a55e1dde0579e8745782c0c01cd2518de9a79d4039d01faac4a0",
+        "coldstart/report.py": "7133dc2dd28eee520d260af7605e5a0efd8971c812dfb8b05fccf238e85056ce",
+        "coldstart/scanner.py": "acbfeb1fc6625467d478129412a53c85dabdae82603ae279eb524f2b2ac9497e"
+      }
+    },
+    "commands_executed": false,
+    "context": "Real-project static sample at a pinned commit. Project commands were not executed. This is not endorsement, adoption, or proof of successful installation. Unknown counts are analysis checkpoints, not coverage percentages or a complete command count.",
+    "summary": {
+      "pass": 1,
+      "fail": 0,
+      "unknown": 11
+    },
+    "report_json": "express.json",
+    "report_html": "express.html"
+  },
+  {
+    "id": "actual-server",
+    "repository": "actualbudget/actual-server",
+    "commit": "7bd499c5be758c47958e351fa62faf91e0bc2b80",
+    "readme": "README.md",
+    "readme_sha256": "ae7f9b0b3431cc7fd908be99285feb17cbfa17df9edff00b8e73dc0f509227b8",
+    "license": "MIT",
+    "sample_note": "Added after baseline because a real server application could expose installation-command patterns; GitHub metadata shows this upstream is archived, so it is a historical compatibility sample, not current adoption. Archived upstream.",
+    "source_url": "https://github.com/actualbudget/actual-server/blob/7bd499c5be758c47958e351fa62faf91e0bc2b80/README.md",
+    "scanner": {
+      "version": "0.1.0",
+      "source_sha256": "b426fd5f4fd4a7680717a6cb4391b7d8f8d9162c3c3970c65b47e33886d40921",
+      "files": {
+        "coldstart/__init__.py": "06d179b4c2557e5db032b551b782499ca090d7ad9fa778314060a8ccf110720f",
+        "coldstart/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+        "coldstart/cli.py": "672cb60bbff81b6704477a77ebb1f7a521efb2d95aa519082218522ef72f7f34",
+        "coldstart/local_targets.py": "a2dcb1229b55a55e1dde0579e8745782c0c01cd2518de9a79d4039d01faac4a0",
+        "coldstart/report.py": "7133dc2dd28eee520d260af7605e5a0efd8971c812dfb8b05fccf238e85056ce",
+        "coldstart/scanner.py": "acbfeb1fc6625467d478129412a53c85dabdae82603ae279eb524f2b2ac9497e"
+      }
+    },
+    "commands_executed": false,
+    "context": "Real-project static sample at a pinned commit. Project commands were not executed. This is not endorsement, adoption, or proof of successful installation. Unknown counts are analysis checkpoints, not coverage percentages or a complete command count.",
+    "summary": {
+      "pass": 0,
+      "fail": 0,
+      "unknown": 1
+    },
+    "report_json": "actual-server.json",
+    "report_html": "actual-server.html"
+  },
+  {
+    "id": "rich",
+    "repository": "Textualize/rich",
+    "commit": "9d8f9a372cc5916fd4781fec207ced7ddac2f08f",
+    "readme": "README.md",
+    "readme_sha256": "2f68e0e5b36f088e4059f08717454bfca47691b0188a278c7966eef6205c0d63",
+    "license": "MIT",
+    "sample_note": "Current default-branch snapshot; no dependencies installed or project commands executed.",
+    "source_url": "https://github.com/Textualize/rich/blob/9d8f9a372cc5916fd4781fec207ced7ddac2f08f/README.md",
+    "scanner": {
+      "version": "0.1.0",
+      "source_sha256": "b426fd5f4fd4a7680717a6cb4391b7d8f8d9162c3c3970c65b47e33886d40921",
+      "files": {
+        "coldstart/__init__.py": "06d179b4c2557e5db032b551b782499ca090d7ad9fa778314060a8ccf110720f",
+        "coldstart/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+        "coldstart/cli.py": "672cb60bbff81b6704477a77ebb1f7a521efb2d95aa519082218522ef72f7f34",
+        "coldstart/local_targets.py": "a2dcb1229b55a55e1dde0579e8745782c0c01cd2518de9a79d4039d01faac4a0",
+        "coldstart/report.py": "7133dc2dd28eee520d260af7605e5a0efd8971c812dfb8b05fccf238e85056ce",
+        "coldstart/scanner.py": "acbfeb1fc6625467d478129412a53c85dabdae82603ae279eb524f2b2ac9497e"
+      }
+    },
+    "commands_executed": false,
+    "context": "Real-project static sample at a pinned commit. Project commands were not executed. This is not endorsement, adoption, or proof of successful installation. Unknown counts are analysis checkpoints, not coverage percentages or a complete command count.",
+    "summary": {
+      "pass": 1,
+      "fail": 0,
+      "unknown": 1
+    },
+    "report_json": "rich.json",
+    "report_html": "rich.html"
+  },
+  {
+    "id": "whisper",
+    "repository": "openai/whisper",
+    "commit": "86098128c0b4f24f0e2aa2994de830614b474227",
+    "readme": "README.md",
+    "readme_sha256": "38c180c2a8d8ba628a3e131ad42bf06c8a51bb681efb30fbe28d5a0f4b65f288",
+    "license": "MIT",
+    "sample_note": "Current default-branch snapshot; no dependencies installed or project commands executed.",
+    "source_url": "https://github.com/openai/whisper/blob/86098128c0b4f24f0e2aa2994de830614b474227/README.md",
+    "scanner": {
+      "version": "0.1.0",
+      "source_sha256": "b426fd5f4fd4a7680717a6cb4391b7d8f8d9162c3c3970c65b47e33886d40921",
+      "files": {
+        "coldstart/__init__.py": "06d179b4c2557e5db032b551b782499ca090d7ad9fa778314060a8ccf110720f",
+        "coldstart/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+        "coldstart/cli.py": "672cb60bbff81b6704477a77ebb1f7a521efb2d95aa519082218522ef72f7f34",
+        "coldstart/local_targets.py": "a2dcb1229b55a55e1dde0579e8745782c0c01cd2518de9a79d4039d01faac4a0",
+        "coldstart/report.py": "7133dc2dd28eee520d260af7605e5a0efd8971c812dfb8b05fccf238e85056ce",
+        "coldstart/scanner.py": "acbfeb1fc6625467d478129412a53c85dabdae82603ae279eb524f2b2ac9497e"
+      }
+    },
+    "commands_executed": false,
+    "context": "Real-project static sample at a pinned commit. Project commands were not executed. This is not endorsement, adoption, or proof of successful installation. Unknown counts are analysis checkpoints, not coverage percentages or a complete command count.",
+    "summary": {
+      "pass": 0,
+      "fail": 0,
+      "unknown": 11
+    },
+    "report_json": "whisper.json",
+    "report_html": "whisper.html"
+  },
+  {
+    "id": "nanoGPT",
+    "repository": "karpathy/nanoGPT",
+    "commit": "3adf61e154c3fe3fca428ad6bc3818b27a3b8291",
+    "readme": "README.md",
+    "readme_sha256": "8d969370683849a2cc4e46c81bf2449717f2daff657586888151933c3590f85f",
+    "license": "MIT",
+    "sample_note": "Legacy sample: README explicitly declares nanoGPT deprecated in favor of nanochat.",
+    "source_url": "https://github.com/karpathy/nanoGPT/blob/3adf61e154c3fe3fca428ad6bc3818b27a3b8291/README.md",
+    "scanner": {
+      "version": "0.1.0",
+      "source_sha256": "b426fd5f4fd4a7680717a6cb4391b7d8f8d9162c3c3970c65b47e33886d40921",
+      "files": {
+        "coldstart/__init__.py": "06d179b4c2557e5db032b551b782499ca090d7ad9fa778314060a8ccf110720f",
+        "coldstart/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+        "coldstart/cli.py": "672cb60bbff81b6704477a77ebb1f7a521efb2d95aa519082218522ef72f7f34",
+        "coldstart/local_targets.py": "a2dcb1229b55a55e1dde0579e8745782c0c01cd2518de9a79d4039d01faac4a0",
+        "coldstart/report.py": "7133dc2dd28eee520d260af7605e5a0efd8971c812dfb8b05fccf238e85056ce",
+        "coldstart/scanner.py": "acbfeb1fc6625467d478129412a53c85dabdae82603ae279eb524f2b2ac9497e"
+      }
+    },
+    "commands_executed": false,
+    "context": "Real-project static sample at a pinned commit. Project commands were not executed. This is not endorsement, adoption, or proof of successful installation. Unknown counts are analysis checkpoints, not coverage percentages or a complete command count.",
+    "summary": {
+      "pass": 8,
+      "fail": 0,
+      "unknown": 10
+    },
+    "report_json": "nanoGPT.json",
+    "report_html": "nanoGPT.html"
+  },
+  {
+    "id": "nanochat",
+    "repository": "karpathy/nanochat",
+    "commit": "92d63d4e8bb4df75c3b71618f31ddde2378b2bcd",
+    "readme": "README.md",
+    "readme_sha256": "77b8dfce94f45ed7c29eecdbd52e4e4137a060036b38c250519341ba3270daca",
+    "license": "MIT",
+    "sample_note": "Current default-branch snapshot; no dependencies installed or project commands executed.",
+    "source_url": "https://github.com/karpathy/nanochat/blob/92d63d4e8bb4df75c3b71618f31ddde2378b2bcd/README.md",
+    "scanner": {
+      "version": "0.1.0",
+      "source_sha256": "b426fd5f4fd4a7680717a6cb4391b7d8f8d9162c3c3970c65b47e33886d40921",
+      "files": {
+        "coldstart/__init__.py": "06d179b4c2557e5db032b551b782499ca090d7ad9fa778314060a8ccf110720f",
+        "coldstart/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+        "coldstart/cli.py": "672cb60bbff81b6704477a77ebb1f7a521efb2d95aa519082218522ef72f7f34",
+        "coldstart/local_targets.py": "a2dcb1229b55a55e1dde0579e8745782c0c01cd2518de9a79d4039d01faac4a0",
+        "coldstart/report.py": "7133dc2dd28eee520d260af7605e5a0efd8971c812dfb8b05fccf238e85056ce",
+        "coldstart/scanner.py": "acbfeb1fc6625467d478129412a53c85dabdae82603ae279eb524f2b2ac9497e"
+      }
+    },
+    "commands_executed": false,
+    "context": "Real-project static sample at a pinned commit. Project commands were not executed. This is not endorsement, adoption, or proof of successful installation. Unknown counts are analysis checkpoints, not coverage percentages or a complete command count.",
+    "summary": {
+      "pass": 2,
+      "fail": 0,
+      "unknown": 6
+    },
+    "report_json": "nanochat.json",
+    "report_html": "nanochat.html"
+  }
+]

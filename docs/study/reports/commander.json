@@ -1,0 +1,508 @@
+{
+  "schema_version": 1,
+  "project": "tj/commander.js",
+  "readme": "Readme.md",
+  "mode": "static",
+  "checks": [
+    {
+      "id": "C001",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 64,
+      "command": "npm install commander",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C002",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 94,
+      "command": "node split.js -s - --fits a-b-c",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C003",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 97,
+      "command": "node split.js -s - --first a-b-c",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C004",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 128,
+      "command": "node string-util.js help split",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C005",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 141,
+      "command": "node string-util.js split --separator=- a-b-c",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C006",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 194,
+      "command": "serve -p 80",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C007",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 195,
+      "command": "serve -p80",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C008",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 196,
+      "command": "serve --port 80",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C009",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 197,
+      "command": "serve --port=80",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C010",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 233,
+      "command": "pizza-options -p",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C011",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 235,
+      "command": "pizza-options -d -s -p vegetarian",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C012",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 240,
+      "command": "pizza-options --pizza-type=cheese",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C013",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 269,
+      "command": "pizza-options",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C014",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 271,
+      "command": "pizza-options --cheese stilton",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C015",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 296,
+      "command": "pizza-options",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C016",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 298,
+      "command": "pizza-options --sauce",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C017",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 300,
+      "command": "pizza-options --cheese=blue",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C018",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 302,
+      "command": "pizza-options --no-sauce --no-cheese",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C019",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 324,
+      "command": "pizza-options",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C020",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 326,
+      "command": "pizza-options --cheese",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C021",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 328,
+      "command": "pizza-options --cheese mozzarella",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C022",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 354,
+      "command": "pizza",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C023",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 379,
+      "command": "collect -n 1 2 3 --letter a b c",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C024",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 382,
+      "command": "collect --letter=A -n80 operand",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C025",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 385,
+      "command": "collect --letter -n 1 -n 2 3 -- operand",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C026",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 401,
+      "command": "./examples/pizza -V",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C027",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 431,
+      "command": "extra --help",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C028",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 443,
+      "command": "extra --drink huge",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C029",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 446,
+      "command": "PORT=80 extra --donate --free-drink",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C030",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 449,
+      "command": "extra --disable-server --port 8000",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C031",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 507,
+      "command": "custom -f 1e2",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C032",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 509,
+      "command": "custom --integer 2",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C033",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 511,
+      "command": "custom -v -v -v",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C034",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 513,
+      "command": "custom -c a -c b -c c",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C035",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 515,
+      "command": "custom --list x,y,z",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C036",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 758,
+      "command": "node ./examples/pizza --help",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C037",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 774,
+      "command": "shell help",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C038",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 775,
+      "command": "shell --help",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C039",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 777,
+      "command": "shell help spawn",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C040",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 778,
+      "command": "shell spawn --help",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C041",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 838,
+      "command": "pizza --unknown",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C042",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 851,
+      "command": "pizza --hepl",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C043",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 996,
+      "command": "program -b subcommand",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C044",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 997,
+      "command": "program subcommand -b",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C045",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 1010,
+      "command": "program --port=80 arg",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C046",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 1011,
+      "command": "program arg --port=80",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C047",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 1051,
+      "command": "node -r ts-node/register pm.ts",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    }
+  ],
+  "summary": {
+    "pass": 0,
+    "fail": 0,
+    "unknown": 47
+  },
+  "context": "Real-project static sample at a pinned commit. Project commands were not executed. This is not endorsement, adoption, or proof of successful installation. Unknown counts are analysis checkpoints, not coverage percentages or a complete command count.",
+  "provenance": {
+    "id": "commander",
+    "repository": "tj/commander.js",
+    "commit": "ba6d13ddb4243e5913367734f8c159089ffe7834",
+    "readme": "Readme.md",
+    "readme_sha256": "e219aeefbaea202ffb39b94a50812a4a2e69e91b67db3a5e39f3e0eeae2d7686",
+    "license": "MIT",
+    "sample_note": "Three established, distinct Node.js tools/frameworks chosen before inspecting scanner findings.",
+    "source_url": "https://github.com/tj/commander.js/blob/ba6d13ddb4243e5913367734f8c159089ffe7834/Readme.md",
+    "scanner": {
+      "version": "0.1.0",
+      "source_sha256": "b426fd5f4fd4a7680717a6cb4391b7d8f8d9162c3c3970c65b47e33886d40921",
+      "files": {
+        "coldstart/__init__.py": "06d179b4c2557e5db032b551b782499ca090d7ad9fa778314060a8ccf110720f",
+        "coldstart/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+        "coldstart/cli.py": "672cb60bbff81b6704477a77ebb1f7a521efb2d95aa519082218522ef72f7f34",
+        "coldstart/local_targets.py": "a2dcb1229b55a55e1dde0579e8745782c0c01cd2518de9a79d4039d01faac4a0",
+        "coldstart/report.py": "7133dc2dd28eee520d260af7605e5a0efd8971c812dfb8b05fccf238e85056ce",
+        "coldstart/scanner.py": "acbfeb1fc6625467d478129412a53c85dabdae82603ae279eb524f2b2ac9497e"
+      }
+    },
+    "commands_executed": false,
+    "context": "Real-project static sample at a pinned commit. Project commands were not executed. This is not endorsement, adoption, or proof of successful installation. Unknown counts are analysis checkpoints, not coverage percentages or a complete command count."
+  }
+}

@@ -1,0 +1,24 @@
+name: Incorrect or unverified reference
+description: Share a reproducible false positive or unsupported command form.
+body:
+  - type: input
+    id: version
+    attributes:
+      label: ColdStart version
+      description: Run coldstart --version.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Minimal sanitized example
+      description: Include the README block and relevant file paths or package scripts. Remove secrets and private content.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual result
+      description: Explain why a reference should be found, broken, or unverified. A public commit and line link are helpful.
+    validations:
+      required: true

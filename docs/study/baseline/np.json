@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "project": "np",
+  "readme": "readme.md",
+  "mode": "static",
+  "checks": [
+    {
+      "id": "C001",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 44,
+      "command": "npm install --global np",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C002",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 50,
+      "command": "np --help",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C003",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 53,
+      "command": "np <version>",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C004",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 82,
+      "command": "np",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C005",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 83,
+      "command": "np patch",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C006",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 84,
+      "command": "np 1.0.2",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C007",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 85,
+      "command": "np 1.0.2-beta.3 --tag=beta",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C008",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 86,
+      "command": "np 1.0.2-beta.3 --tag=beta --contents=dist",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C009",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 87,
+      "command": "np release-draft",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C010",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 233,
+      "command": "npm config set sign-git-tag true",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C011",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 239,
+      "command": "yarn config set version-sign-git-tag true",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C012",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 300,
+      "command": "npm install --save-dev branchsite",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C013",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 319,
+      "command": "git checkout -b fix-old-bug v1.0.0",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C014",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 321,
+      "command": "git push --set-upstream origin HEAD",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C015",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 322,
+      "command": "np patch --any-branch --tag=release-1",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C016",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 354,
+      "command": "'\u276f' Prerequisite check",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C017",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 355,
+      "command": "\u2714 Ping npm registry",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C018",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 356,
+      "command": "\u2714 Check npm version",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C019",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 357,
+      "command": "\u2714 Check yarn version",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C020",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 358,
+      "command": "\u2716 Verify user is authenticated",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C021",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 360,
+      "command": "npm ERR! code E403",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C022",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "readme.md",
+      "line": 361,
+      "command": "npm ERR! 403 Forbidden - GET https://registry.yarnpkg.com/-/package/my-awesome-package/collaborators?format=cli - Forbidden",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    }
+  ],
+  "summary": {
+    "pass": 0,
+    "fail": 0,
+    "unknown": 22
+  }
+}

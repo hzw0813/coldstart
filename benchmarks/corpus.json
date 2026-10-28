@@ -1,0 +1,74 @@
+[
+  {
+    "id": "np",
+    "repository": "sindresorhus/np",
+    "commit": "5ca53e9a04158b2fa544fb9523ecb7e6b2db7ddc",
+    "readme": "readme.md",
+    "readme_sha256": "8d0f06ed2653e6245626e6974e5708dc1bfea04da9431209b9c3f1e71ded6ca6",
+    "license": "MIT",
+    "sample_note": "Three established, distinct Node.js tools/frameworks chosen before inspecting scanner findings."
+  },
+  {
+    "id": "commander",
+    "repository": "tj/commander.js",
+    "commit": "ba6d13ddb4243e5913367734f8c159089ffe7834",
+    "readme": "Readme.md",
+    "readme_sha256": "e219aeefbaea202ffb39b94a50812a4a2e69e91b67db3a5e39f3e0eeae2d7686",
+    "license": "MIT",
+    "sample_note": "Three established, distinct Node.js tools/frameworks chosen before inspecting scanner findings."
+  },
+  {
+    "id": "express",
+    "repository": "expressjs/express",
+    "commit": "1c6f1b0fe4000977b9a7b4f34097e4d527dd9824",
+    "readme": "Readme.md",
+    "readme_sha256": "3cf5f3e224dbb9b5e2bc0ac255871de453762ae7a277f868da5f4a69d6ff2509",
+    "license": "MIT",
+    "sample_note": "Three established, distinct Node.js tools/frameworks chosen before inspecting scanner findings."
+  },
+  {
+    "id": "actual-server",
+    "repository": "actualbudget/actual-server",
+    "commit": "7bd499c5be758c47958e351fa62faf91e0bc2b80",
+    "readme": "README.md",
+    "readme_sha256": "ae7f9b0b3431cc7fd908be99285feb17cbfa17df9edff00b8e73dc0f509227b8",
+    "license": "MIT",
+    "sample_note": "Added after baseline because a real server application could expose installation-command patterns; GitHub metadata shows this upstream is archived, so it is a historical compatibility sample, not current adoption. Archived upstream."
+  },
+  {
+    "id": "rich",
+    "repository": "Textualize/rich",
+    "commit": "9d8f9a372cc5916fd4781fec207ced7ddac2f08f",
+    "readme": "README.md",
+    "readme_sha256": "2f68e0e5b36f088e4059f08717454bfca47691b0188a278c7966eef6205c0d63",
+    "license": "MIT",
+    "sample_note": "Current default-branch snapshot; no dependencies installed or project commands executed."
+  },
+  {
+    "id": "whisper",
+    "repository": "openai/whisper",
+    "commit": "86098128c0b4f24f0e2aa2994de830614b474227",
+    "readme": "README.md",
+    "readme_sha256": "38c180c2a8d8ba628a3e131ad42bf06c8a51bb681efb30fbe28d5a0f4b65f288",
+    "license": "MIT",
+    "sample_note": "Current default-branch snapshot; no dependencies installed or project commands executed."
+  },
+  {
+    "id": "nanoGPT",
+    "repository": "karpathy/nanoGPT",
+    "commit": "3adf61e154c3fe3fca428ad6bc3818b27a3b8291",
+    "readme": "README.md",
+    "readme_sha256": "8d969370683849a2cc4e46c81bf2449717f2daff657586888151933c3590f85f",
+    "license": "MIT",
+    "sample_note": "Legacy sample: README explicitly declares nanoGPT deprecated in favor of nanochat."
+  },
+  {
+    "id": "nanochat",
+    "repository": "karpathy/nanochat",
+    "commit": "92d63d4e8bb4df75c3b71618f31ddde2378b2bcd",
+    "readme": "README.md",
+    "readme_sha256": "77b8dfce94f45ed7c29eecdbd52e4e4137a060036b38c250519341ba3270daca",
+    "license": "MIT",
+    "sample_note": "Current default-branch snapshot; no dependencies installed or project commands executed."
+  }
+]

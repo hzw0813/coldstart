@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "project": "Demo app / stale instructions",
+  "readme": "README.md",
+  "mode": "static",
+  "checks": [
+    {
+      "id": "C001",
+      "kind": "path",
+      "status": "pass",
+      "file": "README.md",
+      "line": 8,
+      "command": "cd web",
+      "message": "Working directory exists in this checkout.",
+      "evidence": "web"
+    },
+    {
+      "id": "C002",
+      "kind": "script",
+      "status": "fail",
+      "file": "README.md",
+      "line": 8,
+      "command": "npm run dev",
+      "message": "Script 'dev' is not declared.",
+      "evidence": "web/package.json: available scripts: start, test"
+    },
+    {
+      "id": "C003",
+      "kind": "file",
+      "status": "fail",
+      "file": "README.md",
+      "line": 14,
+      "command": "pip install -r requirements-old.txt",
+      "message": "Referenced file is missing or is not a regular file.",
+      "evidence": "requirements-old.txt"
+    },
+    {
+      "id": "C004",
+      "kind": "file",
+      "status": "fail",
+      "file": "README.md",
+      "line": 20,
+      "command": "python3 scripts/build.py",
+      "message": "Referenced file is missing or is not a regular file.",
+      "evidence": "scripts/build.py"
+    },
+    {
+      "id": "C005",
+      "kind": "path",
+      "status": "pass",
+      "file": "README.md",
+      "line": 26,
+      "command": "cd web",
+      "message": "Working directory exists in this checkout.",
+      "evidence": "web"
+    },
+    {
+      "id": "C006",
+      "kind": "script",
+      "status": "pass",
+      "file": "README.md",
+      "line": 26,
+      "command": "npm run test",
+      "message": "Script 'test' is declared.",
+      "evidence": "web/package.json: scripts.test = node --test"
+    },
+    {
+      "id": "C007",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 32,
+      "command": "npm install",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    }
+  ],
+  "summary": {
+    "pass": 3,
+    "fail": 3,
+    "unknown": 1
+  },
+  "context": "Synthetic demo fixture — not a scan of a real public project."
+}

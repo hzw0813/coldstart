@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coldstart-readme"
+version = "0.1.0"
+description = "Find stale README command references without executing project code"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["readme", "documentation", "developer-tools", "onboarding"]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/hzw0813/coldstart"
+Issues = "https://github.com/hzw0813/coldstart/issues"
+Demo = "https://hzw0813.github.io/coldstart/"
+
+[project.scripts]
+coldstart = "coldstart.cli:main"
+
+[tool.setuptools]
+packages = ["coldstart"]

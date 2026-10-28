@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "project": "whisper",
+  "readme": "README.md",
+  "mode": "static",
+  "checks": [
+    {
+      "id": "C001",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 36,
+      "command": "sudo apt update",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C002",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 36,
+      "command": "sudo apt install ffmpeg",
+      "message": "An earlier command makes the next step uncertain.",
+      "evidence": "The scanner does not execute commands or assume their side effects."
+    },
+    {
+      "id": "C003",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 39,
+      "command": "sudo pacman -S ffmpeg",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C004",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 42,
+      "command": "brew install ffmpeg",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C005",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 45,
+      "command": "choco install ffmpeg",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C006",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 48,
+      "command": "scoop install ffmpeg",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C007",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 54,
+      "command": "pip install setuptools-rust",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C008",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 85,
+      "command": "whisper audio.flac audio.mp3 audio.wav --model turbo",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C009",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 93,
+      "command": "whisper japanese.wav --language Japanese",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C010",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 99,
+      "command": "whisper japanese.wav --model medium --language Japanese --task translate",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C011",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 107,
+      "command": "whisper --help",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    }
+  ],
+  "summary": {
+    "pass": 0,
+    "fail": 0,
+    "unknown": 11
+  }
+}

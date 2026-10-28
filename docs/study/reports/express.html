@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>ColdStart — expressjs/express / README Reality Check</title>
+<style>
+:root{--paper:#f7f6ef;--ink:#182d3d;--muted:#5d696d;--line:#d8ddd5;--orange:#d9431d;--lime:#d9f579;--green:#286246;--white:#fffef9;--mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}button,summary{font:inherit}a{color:inherit}.wrap{width:min(1100px,calc(100% - 64px));margin:auto}.topbar{display:flex;align-items:center;justify-content:space-between;padding:28px 0 24px;border-bottom:1px solid var(--line);gap:16px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:22px;letter-spacing:-1px}.brand-mark{display:inline-grid;place-items:center;background:var(--ink);color:var(--lime);width:30px;height:30px;border-radius:7px;font-family:var(--mono);font-size:22px}.edition{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}.hero{display:grid;grid-template-columns:1fr 270px;gap:50px;padding:56px 0 35px}.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2px;font-weight:600;margin:0 0 18px;color:var(--orange)}h1{font-size:clamp(40px,6.6vw,76px);line-height:.98;font-weight:800;letter-spacing:-4px;margin:0 0 23px}.hero-copy{font-size:16px;line-height:1.65;max-width:550px;color:var(--muted);margin:0}.stamp{align-self:center;padding:22px 21px;background:var(--lime);border-radius:3px;transform:rotate(2deg);box-shadow:5px 5px 0 var(--ink)}.stamp-title{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;font-weight:700;border-bottom:1px solid #9cba50;padding-bottom:12px;margin-bottom:13px}.stamp strong{display:block;font-size:28px;line-height:1.1;letter-spacing:-1px;margin-bottom:12px}.stamp p{font-size:12px;line-height:1.6;margin:0}.project-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap;padding:17px 0;font-family:var(--mono);font-size:12px;border-top:1px solid var(--line)}.project-name{font-weight:700;font-size:13px;overflow-wrap:anywhere}.slash{color:#8c9897}.project-file{color:var(--muted);overflow-wrap:anywhere}.mode{margin-left:auto;font-size:10px;text-transform:uppercase;letter-spacing:1px;display:flex;gap:7px;align-items:center}.mode::before{content:"";width:6px;height:6px;background:var(--green);border-radius:50%}.stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:5px;overflow:hidden;background:var(--white);margin:3px 0 36px}.stat{padding:22px 27px;display:flex;gap:18px;align-items:center}.stat+.stat{border-left:1px solid var(--line)}.stat-number{font-size:47px;font-weight:750;letter-spacing:-2px;font-variant-numeric:tabular-nums;line-height:1}.stat-label{font-size:13px;font-weight:650;line-height:1.4}.stat-label small{font-size:10px;font-weight:400;display:block;color:var(--muted);margin-top:4px}.stat-fail .stat-number{color:var(--orange)}.stat-pass .stat-number{color:var(--green)}.toolbar{display:flex;gap:20px;align-items:center;justify-content:space-between;margin-bottom:17px}.toolbar-title{font-size:11px;font-family:var(--mono);text-transform:uppercase;letter-spacing:1.4px;white-space:nowrap}.filters{display:flex;gap:5px;flex-wrap:wrap}button{border:1px solid transparent;background:transparent;border-radius:5px;padding:8px 11px;color:var(--muted);font-size:12px;font-weight:550;cursor:pointer}button:hover{border-color:var(--line);color:var(--ink)}button[aria-pressed="true"]{background:var(--ink);color:white}button:focus-visible,summary:focus-visible{outline:3px solid var(--orange);outline-offset:3px}.filter-count{opacity:.65;padding-left:5px;font-family:var(--mono);font-size:10px}.check{border:1px solid var(--line);border-left:4px solid var(--line);border-radius:5px;margin-bottom:16px;background:var(--white);overflow:hidden}.check.fail{border-left-color:var(--orange)}.check.pass{border-left-color:var(--green)}.check.unknown{border-left-color:#87918d}.check-heading{padding:13px 23px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #e9ece5}.check-label{display:flex;align-items:center;gap:9px;font-size:11px;font-weight:700;letter-spacing:.2px}.fail .check-label{color:var(--orange)}.pass .check-label{color:var(--green)}.unknown .check-label{color:var(--muted)}.status-icon{display:grid;place-items:center;width:19px;height:19px;border:1px solid currentColor;border-radius:50%;font-family:var(--mono);font-size:12px;font-weight:bold}.source{font-family:var(--mono);color:var(--muted);font-size:10px;overflow-wrap:anywhere;text-align:right}.check-body{display:flex;gap:21px;padding:24px}.check-index{font-family:var(--mono);font-size:12px;color:#9aa39c;padding-top:5px}.check-content{min-width:0;flex:1}h2{font-size:18px;line-height:1.4;letter-spacing:-.35px;margin:0 0 15px;overflow-wrap:anywhere}.command{background:var(--ink);color:#f0f3e7;border-radius:5px;display:flex;align-items:flex-start;padding:14px 16px;gap:12px}.prompt{font-family:var(--mono);font-size:12px;line-height:1.6;color:var(--lime);user-select:none}pre,code{font-family:var(--mono)}.command pre{font-size:12px;line-height:1.6;margin:0;white-space:pre-wrap;overflow-wrap:anywhere;min-width:0}details{margin-top:16px}summary{font-size:11px;font-weight:650;cursor:pointer;color:var(--muted);width:fit-content;padding:4px 0}.check-id{font-family:var(--mono);font-size:10px;font-weight:400;margin-left:6px;color:#74817d}.evidence{background:#f1f3ec;border-left:2px solid #c7cfc3;font-size:11px;line-height:1.75;padding:12px 15px;margin:9px 0 0;white-space:pre-wrap;overflow-wrap:anywhere;color:#44594f}.empty{border:1px dashed var(--line);padding:40px;text-align:center;color:var(--muted);font-size:14px}.reading-key{border-top:1px solid var(--line);margin-top:37px;padding-top:26px}.reading-key h2{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-bottom:20px}.key-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.key-grid h3{font-size:12px;margin:0 0 8px}.key-grid p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}.key-fail h3{color:var(--orange)}.key-pass h3{color:var(--green)}.scope{margin:25px 0 30px;padding:18px 20px;background:#eeeee5;border-radius:4px;color:var(--muted);font-size:11px;line-height:1.75}.scope strong{color:var(--ink)}footer{border-top:1px solid var(--line);padding:21px 0 30px;display:flex;gap:15px;justify-content:space-between;color:var(--muted);font-family:var(--mono);font-size:10px;line-height:1.6}.footer-brand{font-weight:700;color:var(--ink)}[hidden]{display:none!important}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.no-checks{padding:30px;border:1px dashed var(--line);color:var(--muted)}
+@media(max-width:760px){.wrap{width:calc(100% - 36px)}.topbar{padding-top:20px}.edition{font-size:8px;letter-spacing:1px}.hero{grid-template-columns:1fr;gap:24px;padding:38px 0 28px}h1{letter-spacing:-2.4px;font-size:54px}.stamp{transform:none;box-shadow:none;display:grid;grid-template-columns:110px 1fr;gap:0 18px;padding:15px 17px}.stamp-title{grid-column:1/-1;font-size:9px;padding-bottom:8px;margin-bottom:10px}.stamp strong{font-size:21px;margin:0}.stamp p{font-size:11px}.hero-copy{font-size:14px}.stats{margin-bottom:28px}.stat{padding:18px 14px;display:block}.stat-number{font-size:35px;margin-bottom:7px}.stat-label{font-size:11px}.stat-label small{font-size:9px}.toolbar{align-items:flex-start;flex-direction:column;gap:12px}.filters{gap:3px}button{font-size:11px;padding:7px 9px}.check-heading{padding:12px 14px}.source{font-size:9px}.check-body{padding:18px 14px;gap:11px}.check-index{font-size:10px}h2{font-size:16px}.command{padding:12px}.command pre{font-size:11px}.key-grid{grid-template-columns:1fr;gap:20px}.mode{margin-left:0}.project-row{gap:10px}.project-name{width:100%}.project-row .slash{display:none}footer{flex-direction:column;gap:4px}}
+@media print{body{background:white}.wrap{width:100%}.filters{display:none}.check{break-inside:avoid}.check[hidden]{display:block!important}.hero{padding:25px 0}.hero h1{font-size:50px}.stamp{transform:none;box-shadow:none}.stats{margin-bottom:20px}footer{padding-bottom:0}.empty{display:none}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">↗</span>ColdStart</div><div class="edition">Repository evidence / v0.1</div></header>
+  <section class="hero" aria-labelledby="report-title">
+    <div><p class="eyebrow">Before the first install</p><h1 id="report-title">README<br>Reality Check.</h1><p class="hero-copy">Find the broken references between your instructions and your repository. Every finding comes with a place to look.</p></div>
+    <aside class="stamp"><div class="stamp-title">Inspection, not execution</div><strong>Local files.<br>Real evidence.</strong><p>Static checks only. Commands were not executed. A found reference does not prove installation works.</p></aside>
+  </section>
+  <div class="project-row"><span class="project-name">expressjs/express</span><span class="slash">/</span><span class="project-file">Readme.md</span><span class="mode">Offline static analysis</span></div>
+  <aside class="scope" style="margin:0 0 18px;border-left:4px solid var(--orange)"><strong>Report context:</strong> Real-project static sample at a pinned commit. Project commands were not executed. This is not endorsement, adoption, or proof of successful installation. Unknown counts are analysis checkpoints, not coverage percentages or a complete command count.</aside>
+  <section class="stats" aria-label="Summary">
+    <div class="stat stat-fail"><div class="stat-number">0</div><div class="stat-label">Broken references<small>Supported checks found a mismatch</small></div></div>
+    <div class="stat stat-pass"><div class="stat-number">1</div><div class="stat-label">References found<small>Exists; behavior not tested</small></div></div>
+    <div class="stat stat-unknown"><div class="stat-number">11</div><div class="stat-label">Needs a run<small>Beyond static verification</small></div></div>
+  </section>
+  <section aria-label="Findings">
+    <div class="toolbar"><div class="toolbar-title">The evidence / 12 checks</div><div class="filters" role="group" aria-label="Filter findings"><button type="button" data-filter="all" aria-pressed="true">All<span class="filter-count">12</span></button><button type="button" data-filter="fail" aria-pressed="false">Broken<span class="filter-count">0</span></button><button type="button" data-filter="unknown" aria-pressed="false">Needs a run<span class="filter-count">11</span></button><button type="button" data-filter="pass" aria-pressed="false">Found<span class="filter-count">1</span></button></div></div>
+    <div id="checks">
+<article class="check unknown" data-status="unknown">
+  <div class="check-heading">
+    <div class="check-label"><span class="status-icon" aria-hidden="true">?</span><span>Needs a run</span></div>
+    <span class="source">Readme.md:65</span>
+  </div>
+  <div class="check-body">
+    <div class="check-index" aria-hidden="true">01</div>
+    <div class="check-content">
+      <h2>This command is outside the static checker&#x27;s supported scope.</h2>
+      <div class="command"><span class="prompt" aria-hidden="true">$</span><pre><code>npm install express</code></pre></div>
+      <details open><summary>Evidence <span class="check-id">C001</span></summary><pre class="evidence">No command was executed; later steps in this block may depend on its effects.</pre></details>
+    </div>
+  </div>
+</article>
+
+<article class="check unknown" data-status="unknown">
+  <div class="check-heading">
+    <div class="check-label"><span class="status-icon" aria-hidden="true">?</span><span>Needs a run</span></div>
+    <span class="source">Readme.md:96</span>
+  </div>
+  <div class="check-body">
+    <div class="check-index" aria-hidden="true">02</div>
+    <div class="check-content">
+      <h2>This command is outside the static checker&#x27;s supported scope.</h2>
+      <div class="command"><span class="prompt" aria-hidden="true">$</span><pre><code>npm install -g express-generator@4</code></pre></div>
+      <details open><summary>Evidence <span class="check-id">C002</span></summary><pre class="evidence">No command was executed; later steps in this block may depend on its effects.</pre></details>
+    </div>
+  </div>
+</article>
+
+<article class="check unknown" data-status="unknown">
+  <div class="check-heading">
+    <div class="check-label"><span class="status-icon" aria-hidden="true">?</span><span>Needs a run</span></div>
+    <span class="source">Readme.md:102</span>
+  </div>
+  <div class="check-body">
+    <div class="check-index" aria-hidden="true">03</div>
+    <div class="check-content">
+      <h2>This command is outside the static checker&#x27;s supported scope.</h2>
+      <div class="command"><span class="prompt" aria-hidden="true">$</span><pre><code>express /tmp/foo</code></pre></div>
+      <details open><summary>Evidence <span class="check-id">C003</span></summary><pre class="evidence">No command was executed; later steps in this block may depend on its effects.</pre></details>
+    </div>
+  </div>
+</article>
+
+<article class="check unknown" data-status="unknown">
+  <div class="check-heading">
+    <div class="check-label"><span class="status-icon" aria-hidden="true">?</span><span>Needs a run</span></div>
+    <span class="source">Readme.md:102</span>
+  </div>
+  <div class="check-body">
+    <div class="check-index" aria-hidden="true">04</div>
+    <div class="check-content">
+      <h2>An earlier command makes the next step uncertain.</h2>
+      <div class="command"><span class="prompt" aria-hidden="true">$</span><pre><code>cd /tmp/foo</code></pre></div>
+      <details open><summary>Evidence <span class="check-id">C004</span></summary><pre class="evidence">The scanner does not execute commands or assume their side effects.</pre></details>
+    </div>
+  </div>
+</article>
+
+<article class="check unknown" data-status="unknown">
+  <div class="check-heading">
+    <div class="check-label"><span class="status-icon" aria-hidden="true">?</span><span>Needs a run</span></div>
+    <span class="source">Readme.md:108</span>
+  </div>
+  <div class="check-body">
+    <div class="check-index" aria-hidden="true">05</div>
+    <div class="check-content">
+      <h2>This command is outside the static checker&#x27;s supported scope.</h2>
+      <div class="command"><span class="prompt" aria-hidden="true">$</span><pre><code>npm install</code></pre></div>
+      <details open><summary>Evidence <span class="check-id">C005</span></summary><pre class="evidence">No command was executed; later steps in this block may depend on its effects.</pre></details>
+    </div>
+  </div>
+</article>
+
+<article class="check unknown" data-status="unknown">
+  <div class="check-heading">
+    <div class="check-label"><span class="status-icon" aria-hidden="true">?</span><span>Needs a run</span></div>
+    <span class="source">Readme.md:114</span>
+  </div>
+  <div class="check-body">
+    <div class="check-index" aria-hidden="true">06</div>
+    <div class="check-content">
+      <h2>No explicit start script is declared.</h2>
+      <div class="command"><span class="prompt" aria-hidden="true">$</span><pre><code>npm start</code></pre></div>
+      <details open><summary>Evidence <span class="check-id">C006</span></summary><pre class="evidence">npm lifecycle defaults and generated server.js files require runtime verification.</pre></details>
+    </div>
+  </div>
+</article>
+
+<article class="check unknown" data-status="unknown">
+  <div class="check-heading">
+    <div class="check-label"><span class="status-icon" aria-hidden="true">?</span><span>Needs a run</span></div>
+    <span class="source">Readme.md:134</span>
+  </div>
+  <div class="check-body">
+    <div class="check-index" aria-hidden="true">07</div>
+    <div class="check-content">
+      <h2>This command is outside the static checker&#x27;s supported scope.</h2>
+      <div class="command"><span class="prompt" aria-hidden="true">$</span><pre><code>git clone https://github.com/expressjs/express.git --depth 1</code></pre></div>
+      <details open><summary>Evidence <span class="check-id">C007</span></summary><pre class="evidence">No command was executed; later steps in this block may depend on its effects.</pre></details>
+    </div>
+  </div>
+</article>
+
+<article class="check unknown" data-status="unknown">
+  <div class="check-heading">
+    <div class="check-label"><span class="status-icon" aria-hidden="true">?</span><span>Needs a run</span></div>
+    <span class="source">Readme.md:134</span>
+  </div>
+  <div class="check-body">
+    <div class="check-index" aria-hidden="true">08</div>
+    <div class="check-content">
+      <h2>An earlier command makes the next step uncertain.</h2>
+      <div class="command"><span class="prompt" aria-hidden="true">$</span><pre><code>cd express</code></pre></div>
+      <details open><summary>Evidence <span class="check-id">C008</span></summary><pre class="evidence">The scanner does not execute commands or assume their side effects.</pre></details>
+    </div>
+  </div>
+</article>
+
+<article class="check unknown" data-status="unknown">
+  <div class="check-heading">
+    <div class="check-label"><span class="status-icon" aria-hidden="true">?</span><span>Needs a run</span></div>
+    <span class="source">Readme.md:140</span>
+  </div>
+  <div class="check-body">
+    <div class="check-index" aria-hidden="true">09</div>
+    <div class="check-content">
+      <h2>This command is outside the static checker&#x27;s supported scope.</h2>
+      <div class="command"><span class="prompt" aria-hidden="true">$</span><pre><code>npm install</code></pre></div>
+      <details open><summary>Evidence <span class="check-id">C009</span></summary><pre class="evidence">No command was executed; later steps in this block may depend on its effects.</pre></details>
+    </div>
+  </div>
+</article>
+
+<article class="check unknown" data-status="unknown">
+  <div class="check-heading">
+    <div class="check-label"><span class="status-icon" aria-hidden="true">?</span><span>Needs a run</span></div>
+    <span class="source">Readme.md:146</span>
+  </div>
+  <div class="check-body">
+    <div class="check-index" aria-hidden="true">10</div>
+    <div class="check-content">
+      <h2>This command is outside the static checker&#x27;s supported scope.</h2>
+      <div class="command"><span class="prompt" aria-hidden="true">$</span><pre><code>node examples/content-negotiation</code></pre></div>
+      <details open><summary>Evidence <span class="check-id">C010</span></summary><pre class="evidence">No command was executed; later steps in this block may depend on its effects.</pre></details>
+    </div>
+  </div>
+</article>
+
+<article class="check unknown" data-status="unknown">
+  <div class="check-heading">
+    <div class="check-label"><span class="status-icon" aria-hidden="true">?</span><span>Needs a run</span></div>
+    <span class="source">Readme.md:168</span>
+  </div>
+  <div class="check-body">
+    <div class="check-index" aria-hidden="true">11</div>
+    <div class="check-content">
+      <h2>This command is outside the static checker&#x27;s supported scope.</h2>
+      <div class="command"><span class="prompt" aria-hidden="true">$</span><pre><code>npm install</code></pre></div>
+      <details open><summary>Evidence <span class="check-id">C011</span></summary><pre class="evidence">No command was executed; later steps in this block may depend on its effects.</pre></details>
+    </div>
+  </div>
+</article>
+
+<article class="check pass" data-status="pass">
+  <div class="check-heading">
+    <div class="check-label"><span class="status-icon" aria-hidden="true">+</span><span>Reference found</span></div>
+    <span class="source">Readme.md:174</span>
+  </div>
+  <div class="check-body">
+    <div class="check-index" aria-hidden="true">12</div>
+    <div class="check-content">
+      <h2>Script &#x27;test&#x27; is declared.</h2>
+      <div class="command"><span class="prompt" aria-hidden="true">$</span><pre><code>npm test</code></pre></div>
+      <details open><summary>Evidence <span class="check-id">C012</span></summary><pre class="evidence">package.json: scripts.test = mocha --require test/support/env --reporter spec --check-leaks test/ test/acceptance/</pre></details>
+    </div>
+  </div>
+</article></div>
+    <p id="empty" class="empty" hidden>No findings in this category.</p>
+    <p id="filter-status" class="sr-only" aria-live="polite">Showing 12 checks.</p>
+  </section>
+  <section class="reading-key" aria-labelledby="reading-key-title"><h2 id="reading-key-title">How to read this report</h2><div class="key-grid"><div class="key-fail"><h3>Broken reference</h3><p>A supported static check found a mismatch in the supplied repository snapshot. Review the command and the evidence together.</p></div><div class="key-pass"><h3>Reference found</h3><p>The referenced file, directory, or script exists. Its behavior, dependencies, and execution were not tested.</p></div><div><h3>Needs a run</h3><p>The step could not be resolved with the supported static checks. Review it and run it in an appropriate environment.</p></div></div></section>
+  <aside class="scope"><strong>Scope matters.</strong> ColdStart does not verify dependency installation, network services, credentials, operating-system compatibility, or program behavior. Each shell block starts at the repository root; paths are followed only within the supported static command subset. This report reflects the local files inspected, not a guarantee about a release or fresh clone.</aside>
+  <footer><span><span class="footer-brand">ColdStart</span> / Make the first run less cold.</span><span>Self-contained report · No uploads · No telemetry</span></footer>
+</main>
+<script>
+(function () {
+  'use strict';
+  var buttons = Array.from(document.querySelectorAll('[data-filter]'));
+  var checks = Array.from(document.querySelectorAll('[data-status]'));
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      var filter = button.dataset.filter;
+      var visible = 0;
+      buttons.forEach(function (item) { item.setAttribute('aria-pressed', String(item === button)); });
+      checks.forEach(function (check) {
+        check.hidden = filter !== 'all' && check.dataset.status !== filter;
+        if (!check.hidden) visible += 1;
+      });
+      document.getElementById('empty').hidden = visible !== 0;
+      document.getElementById('filter-status').textContent = 'Showing ' + visible + ' of ' + checks.length + ' checks.';
+    });
+  });
+}());
+</script>
+</body>
+</html>

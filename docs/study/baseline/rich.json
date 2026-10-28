@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "project": "rich",
+  "readme": "README.md",
+  "mode": "static",
+  "checks": [
+    {
+      "id": "C001",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 51,
+      "command": "python -m pip install rich",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C002",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 57,
+      "command": "python -m rich",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    }
+  ],
+  "summary": {
+    "pass": 0,
+    "fail": 0,
+    "unknown": 2
+  }
+}

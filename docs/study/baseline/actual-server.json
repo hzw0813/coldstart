@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "project": "actual-server",
+  "readme": "README.md",
+  "mode": "static",
+  "checks": [
+    {
+      "id": "C001",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 1,
+      "command": "",
+      "message": "No supported shell examples were available to check.",
+      "evidence": "Use bash, sh, zsh, shell, or console fenced blocks; console commands need a $ prompt."
+    }
+  ],
+  "summary": {
+    "pass": 0,
+    "fail": 0,
+    "unknown": 1
+  }
+}

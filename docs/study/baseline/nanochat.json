@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "project": "nanochat",
+  "readme": "README.md",
+  "mode": "static",
+  "checks": [
+    {
+      "id": "C001",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 35,
+      "command": "uv sync --extra gpu",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C002",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 36,
+      "command": "uv sync --extra cpu    # (or) Use for CPU-only / MPS",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C003",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 37,
+      "command": "source .venv/bin/activate",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C004",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 43,
+      "command": "uv sync --extra gpu --group dev",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C005",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 51,
+      "command": "bash runs/speedrun.sh",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C006",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 57,
+      "command": "python -m scripts.chat_cli",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C007",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 127,
+      "command": "NANOCHAT_DTYPE=float32 python -m scripts.chat_cli -p hello",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C008",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 128,
+      "command": "NANOCHAT_DTYPE=bfloat16 torchrun --nproc_per_node=8 -m scripts.base_train  # force bf16",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    }
+  ],
+  "summary": {
+    "pass": 0,
+    "fail": 0,
+    "unknown": 8
+  }
+}

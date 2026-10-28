@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "project": "karpathy/nanoGPT",
+  "readme": "README.md",
+  "mode": "static",
+  "checks": [
+    {
+      "id": "C001",
+      "kind": "file",
+      "status": "pass",
+      "file": "README.md",
+      "line": 40,
+      "command": "python data/shakespeare_char/prepare.py",
+      "message": "Referenced file exists in this checkout.",
+      "evidence": "data/shakespeare_char/prepare.py"
+    },
+    {
+      "id": "C002",
+      "kind": "file",
+      "status": "pass",
+      "file": "README.md",
+      "line": 48,
+      "command": "python train.py config/train_shakespeare_char.py",
+      "message": "Referenced file exists in this checkout.",
+      "evidence": "train.py"
+    },
+    {
+      "id": "C003",
+      "kind": "file",
+      "status": "pass",
+      "file": "README.md",
+      "line": 54,
+      "command": "python sample.py --out_dir=out-shakespeare-char",
+      "message": "Referenced file exists in this checkout.",
+      "evidence": "sample.py"
+    },
+    {
+      "id": "C004",
+      "kind": "file",
+      "status": "pass",
+      "file": "README.md",
+      "line": 85,
+      "command": "python train.py config/train_shakespeare_char.py --device=cpu --compile=False --eval_iters=20 --log_interval=1 --block_size=64 --batch_size=12 --n_layer=4 --n_head=4 --n_embd=128 --max_iters=2000 --lr_decay_iters=2000 --dropout=0.0",
+      "message": "Referenced file exists in this checkout.",
+      "evidence": "train.py"
+    },
+    {
+      "id": "C005",
+      "kind": "file",
+      "status": "pass",
+      "file": "README.md",
+      "line": 91,
+      "command": "python sample.py --out_dir=out-shakespeare-char --device=cpu",
+      "message": "Referenced file exists in this checkout.",
+      "evidence": "sample.py"
+    },
+    {
+      "id": "C006",
+      "kind": "file",
+      "status": "pass",
+      "file": "README.md",
+      "line": 112,
+      "command": "python data/openwebtext/prepare.py",
+      "message": "Referenced file exists in this checkout.",
+      "evidence": "data/openwebtext/prepare.py"
+    },
+    {
+      "id": "C007",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 118,
+      "command": "torchrun --standalone --nproc_per_node=8 train.py config/train_gpt2.py",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C008",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 127,
+      "command": "torchrun --nproc_per_node=8 --nnodes=2 --node_rank=0 --master_addr=123.456.123.456 --master_port=1234 train.py",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C009",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 129,
+      "command": "torchrun --nproc_per_node=8 --nnodes=2 --node_rank=1 --master_addr=123.456.123.456 --master_port=1234 train.py",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C010",
+      "kind": "file",
+      "status": "pass",
+      "file": "README.md",
+      "line": 141,
+      "command": "python train.py config/eval_gpt2.py",
+      "message": "Referenced file exists in this checkout.",
+      "evidence": "train.py"
+    },
+    {
+      "id": "C011",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 142,
+      "command": "python train.py config/eval_gpt2_medium.py",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C012",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 143,
+      "command": "python train.py config/eval_gpt2_large.py",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C013",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 144,
+      "command": "python train.py config/eval_gpt2_xl.py",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C014",
+      "kind": "file",
+      "status": "pass",
+      "file": "README.md",
+      "line": 163,
+      "command": "python train.py config/finetune_shakespeare.py",
+      "message": "Referenced file exists in this checkout.",
+      "evidence": "train.py"
+    },
+    {
+      "id": "C015",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 197,
+      "command": "python sample.py \\",
+      "message": "Shell expansion or multiline commands are not modeled.",
+      "evidence": "The rest of this fenced block is treated as unknown."
+    },
+    {
+      "id": "C016",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 198,
+      "command": "--init_from=gpt2-xl \\",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C017",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 199,
+      "command": "--start=\"What is the answer to life, the universe, and everything?\" \\",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C018",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 200,
+      "command": "--num_samples=5 --max_new_tokens=100",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    }
+  ],
+  "summary": {
+    "pass": 8,
+    "fail": 0,
+    "unknown": 10
+  },
+  "context": "Real-project static sample at a pinned commit. Project commands were not executed. This is not endorsement, adoption, or proof of successful installation. Unknown counts are analysis checkpoints, not coverage percentages or a complete command count.",
+  "provenance": {
+    "id": "nanoGPT",
+    "repository": "karpathy/nanoGPT",
+    "commit": "3adf61e154c3fe3fca428ad6bc3818b27a3b8291",
+    "readme": "README.md",
+    "readme_sha256": "8d969370683849a2cc4e46c81bf2449717f2daff657586888151933c3590f85f",
+    "license": "MIT",
+    "sample_note": "Legacy sample: README explicitly declares nanoGPT deprecated in favor of nanochat.",
+    "source_url": "https://github.com/karpathy/nanoGPT/blob/3adf61e154c3fe3fca428ad6bc3818b27a3b8291/README.md",
+    "scanner": {
+      "version": "0.1.0",
+      "source_sha256": "b426fd5f4fd4a7680717a6cb4391b7d8f8d9162c3c3970c65b47e33886d40921",
+      "files": {
+        "coldstart/__init__.py": "06d179b4c2557e5db032b551b782499ca090d7ad9fa778314060a8ccf110720f",
+        "coldstart/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+        "coldstart/cli.py": "672cb60bbff81b6704477a77ebb1f7a521efb2d95aa519082218522ef72f7f34",
+        "coldstart/local_targets.py": "a2dcb1229b55a55e1dde0579e8745782c0c01cd2518de9a79d4039d01faac4a0",
+        "coldstart/report.py": "7133dc2dd28eee520d260af7605e5a0efd8971c812dfb8b05fccf238e85056ce",
+        "coldstart/scanner.py": "acbfeb1fc6625467d478129412a53c85dabdae82603ae279eb524f2b2ac9497e"
+      }
+    },
+    "commands_executed": false,
+    "context": "Real-project static sample at a pinned commit. Project commands were not executed. This is not endorsement, adoption, or proof of successful installation. Unknown counts are analysis checkpoints, not coverage percentages or a complete command count."
+  }
+}

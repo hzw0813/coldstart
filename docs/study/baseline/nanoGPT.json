@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "project": "nanoGPT",
+  "readme": "README.md",
+  "mode": "static",
+  "checks": [
+    {
+      "id": "C001",
+      "kind": "file",
+      "status": "pass",
+      "file": "README.md",
+      "line": 40,
+      "command": "python data/shakespeare_char/prepare.py",
+      "message": "Referenced file exists in this checkout.",
+      "evidence": "data/shakespeare_char/prepare.py"
+    },
+    {
+      "id": "C002",
+      "kind": "file",
+      "status": "pass",
+      "file": "README.md",
+      "line": 48,
+      "command": "python train.py config/train_shakespeare_char.py",
+      "message": "Referenced file exists in this checkout.",
+      "evidence": "train.py"
+    },
+    {
+      "id": "C003",
+      "kind": "file",
+      "status": "pass",
+      "file": "README.md",
+      "line": 54,
+      "command": "python sample.py --out_dir=out-shakespeare-char",
+      "message": "Referenced file exists in this checkout.",
+      "evidence": "sample.py"
+    },
+    {
+      "id": "C004",
+      "kind": "file",
+      "status": "pass",
+      "file": "README.md",
+      "line": 85,
+      "command": "python train.py config/train_shakespeare_char.py --device=cpu --compile=False --eval_iters=20 --log_interval=1 --block_size=64 --batch_size=12 --n_layer=4 --n_head=4 --n_embd=128 --max_iters=2000 --lr_decay_iters=2000 --dropout=0.0",
+      "message": "Referenced file exists in this checkout.",
+      "evidence": "train.py"
+    },
+    {
+      "id": "C005",
+      "kind": "file",
+      "status": "pass",
+      "file": "README.md",
+      "line": 91,
+      "command": "python sample.py --out_dir=out-shakespeare-char --device=cpu",
+      "message": "Referenced file exists in this checkout.",
+      "evidence": "sample.py"
+    },
+    {
+      "id": "C006",
+      "kind": "file",
+      "status": "pass",
+      "file": "README.md",
+      "line": 112,
+      "command": "python data/openwebtext/prepare.py",
+      "message": "Referenced file exists in this checkout.",
+      "evidence": "data/openwebtext/prepare.py"
+    },
+    {
+      "id": "C007",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 118,
+      "command": "torchrun --standalone --nproc_per_node=8 train.py config/train_gpt2.py",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C008",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 127,
+      "command": "torchrun --nproc_per_node=8 --nnodes=2 --node_rank=0 --master_addr=123.456.123.456 --master_port=1234 train.py",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C009",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 129,
+      "command": "torchrun --nproc_per_node=8 --nnodes=2 --node_rank=1 --master_addr=123.456.123.456 --master_port=1234 train.py",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C010",
+      "kind": "file",
+      "status": "pass",
+      "file": "README.md",
+      "line": 141,
+      "command": "python train.py config/eval_gpt2.py",
+      "message": "Referenced file exists in this checkout.",
+      "evidence": "train.py"
+    },
+    {
+      "id": "C011",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 142,
+      "command": "python train.py config/eval_gpt2_medium.py",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C012",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 143,
+      "command": "python train.py config/eval_gpt2_large.py",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C013",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 144,
+      "command": "python train.py config/eval_gpt2_xl.py",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C014",
+      "kind": "file",
+      "status": "pass",
+      "file": "README.md",
+      "line": 163,
+      "command": "python train.py config/finetune_shakespeare.py",
+      "message": "Referenced file exists in this checkout.",
+      "evidence": "train.py"
+    },
+    {
+      "id": "C015",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 197,
+      "command": "python sample.py \\",
+      "message": "Shell expansion or multiline commands are not modeled.",
+      "evidence": "The rest of this fenced block is treated as unknown."
+    },
+    {
+      "id": "C016",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 198,
+      "command": "--init_from=gpt2-xl \\",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C017",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 199,
+      "command": "--start=\"What is the answer to life, the universe, and everything?\" \\",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C018",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 200,
+      "command": "--num_samples=5 --max_new_tokens=100",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    }
+  ],
+  "summary": {
+    "pass": 8,
+    "fail": 0,
+    "unknown": 10
+  }
+}

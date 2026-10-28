@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "project": "karpathy/nanochat",
+  "readme": "README.md",
+  "mode": "static",
+  "checks": [
+    {
+      "id": "C001",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 35,
+      "command": "uv sync --extra gpu",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C002",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 36,
+      "command": "uv sync --extra cpu    # (or) Use for CPU-only / MPS",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C003",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 37,
+      "command": "source .venv/bin/activate",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    },
+    {
+      "id": "C004",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 43,
+      "command": "uv sync --extra gpu --group dev",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C005",
+      "kind": "file",
+      "status": "pass",
+      "file": "README.md",
+      "line": 51,
+      "command": "bash runs/speedrun.sh",
+      "message": "A local shell script reference exists.",
+      "evidence": "runs/speedrun.sh; Local reference only; runtime and environment resolution are unverified."
+    },
+    {
+      "id": "C006",
+      "kind": "file",
+      "status": "pass",
+      "file": "README.md",
+      "line": 57,
+      "command": "python -m scripts.chat_cli",
+      "message": "A local module entry-point reference exists.",
+      "evidence": "scripts/chat_cli.py; Local reference only; runtime and environment resolution are unverified."
+    },
+    {
+      "id": "C007",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 127,
+      "command": "NANOCHAT_DTYPE=float32 python -m scripts.chat_cli -p hello",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C008",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "README.md",
+      "line": 128,
+      "command": "NANOCHAT_DTYPE=bfloat16 torchrun --nproc_per_node=8 -m scripts.base_train  # force bf16",
+      "message": "Earlier steps make this block's state uncertain.",
+      "evidence": "No commands were executed. Put independent examples in separate fenced blocks."
+    }
+  ],
+  "summary": {
+    "pass": 2,
+    "fail": 0,
+    "unknown": 6
+  },
+  "context": "Real-project static sample at a pinned commit. Project commands were not executed. This is not endorsement, adoption, or proof of successful installation. Unknown counts are analysis checkpoints, not coverage percentages or a complete command count.",
+  "provenance": {
+    "id": "nanochat",
+    "repository": "karpathy/nanochat",
+    "commit": "92d63d4e8bb4df75c3b71618f31ddde2378b2bcd",
+    "readme": "README.md",
+    "readme_sha256": "77b8dfce94f45ed7c29eecdbd52e4e4137a060036b38c250519341ba3270daca",
+    "license": "MIT",
+    "sample_note": "Current default-branch snapshot; no dependencies installed or project commands executed.",
+    "source_url": "https://github.com/karpathy/nanochat/blob/92d63d4e8bb4df75c3b71618f31ddde2378b2bcd/README.md",
+    "scanner": {
+      "version": "0.1.0",
+      "source_sha256": "b426fd5f4fd4a7680717a6cb4391b7d8f8d9162c3c3970c65b47e33886d40921",
+      "files": {
+        "coldstart/__init__.py": "06d179b4c2557e5db032b551b782499ca090d7ad9fa778314060a8ccf110720f",
+        "coldstart/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+        "coldstart/cli.py": "672cb60bbff81b6704477a77ebb1f7a521efb2d95aa519082218522ef72f7f34",
+        "coldstart/local_targets.py": "a2dcb1229b55a55e1dde0579e8745782c0c01cd2518de9a79d4039d01faac4a0",
+        "coldstart/report.py": "7133dc2dd28eee520d260af7605e5a0efd8971c812dfb8b05fccf238e85056ce",
+        "coldstart/scanner.py": "acbfeb1fc6625467d478129412a53c85dabdae82603ae279eb524f2b2ac9497e"
+      }
+    },
+    "commands_executed": false,
+    "context": "Real-project static sample at a pinned commit. Project commands were not executed. This is not endorsement, adoption, or proof of successful installation. Unknown counts are analysis checkpoints, not coverage percentages or a complete command count."
+  }
+}

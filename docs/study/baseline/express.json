@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "project": "express",
+  "readme": "Readme.md",
+  "mode": "static",
+  "checks": [
+    {
+      "id": "C001",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 65,
+      "command": "npm install express",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C002",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 96,
+      "command": "npm install -g express-generator@4",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C003",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 102,
+      "command": "express /tmp/foo",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C004",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 102,
+      "command": "cd /tmp/foo",
+      "message": "An earlier command makes the next step uncertain.",
+      "evidence": "The scanner does not execute commands or assume their side effects."
+    },
+    {
+      "id": "C005",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 108,
+      "command": "npm install",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C006",
+      "kind": "script",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 114,
+      "command": "npm start",
+      "message": "No explicit start script is declared.",
+      "evidence": "npm lifecycle defaults and generated server.js files require runtime verification."
+    },
+    {
+      "id": "C007",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 134,
+      "command": "git clone https://github.com/expressjs/express.git --depth 1",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C008",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 134,
+      "command": "cd express",
+      "message": "An earlier command makes the next step uncertain.",
+      "evidence": "The scanner does not execute commands or assume their side effects."
+    },
+    {
+      "id": "C009",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 140,
+      "command": "npm install",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C010",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 146,
+      "command": "node examples/content-negotiation",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C011",
+      "kind": "unsupported",
+      "status": "unknown",
+      "file": "Readme.md",
+      "line": 168,
+      "command": "npm install",
+      "message": "This command is outside the static checker's supported scope.",
+      "evidence": "No command was executed; later steps in this block may depend on its effects."
+    },
+    {
+      "id": "C012",
+      "kind": "script",
+      "status": "pass",
+      "file": "Readme.md",
+      "line": 174,
+      "command": "npm test",
+      "message": "Script 'test' is declared.",
+      "evidence": "package.json: scripts.test = mocha --require test/support/env --reporter spec --check-leaks test/ test/acceptance/"
+    }
+  ],
+  "summary": {
+    "pass": 1,
+    "fail": 0,
+    "unknown": 11
+  }
+}
